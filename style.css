@@ -1,61 +1,257 @@
-    * {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #f5f5f5; /* Lichtgrijze achtergrondkleur */
+}
+
+/* Stijl voor de header */
+/* Stijlen voor de header */
+/* Stijlen voor de header */
+/* Stijlen voor de header */
+header {
+    background-color: #ffcc00;
+    padding: 10px;
+    display: flex;
+    
+    align-items: center; /* Verticaal centreren van inhoud */
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* justify-content: flex-end; */
+    margin-left: 20px; /* Ruimte tussen links en logo */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #450079;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #ffcc00;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #e2b500;
+}
+
+
+
+
+h1 {
+    text-align: center;
+    margin: 20px;
+}
+
+p {
+    text-align: center;
+    margin: 10px;
+}
+
+/* Stijlen voor het vak aan de rechterkant */
+.right-box {
+    background-color: #450079;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto; /* Horizontaal centreren zonder negatieve marges */
+    position: relative;
+    z-index: 1; /* Bovenop de achtergrond zetten */
+    text-align: center; /* Tekst centreren binnen het vak */
+}
+
+.right-box h2 {
+    font-size: 24px;
+}
+
+.right-box p {
+    font-size: 16px;
+}
+
+.yellow-background {
+    background-color: #ffcc00; 
+    color: #450079; 
+    padding: 10px; 
+    text-align: center; 
+}
+
+
+/* Stijlen voor het smoelenboek */
+.teacher-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    width: 60%;
+    margin: auto;
+}
+
+.teacher-block {
+    color: #450079;
+    background-color: #ffcc00;
+    border: 1px solid #e2b500;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.teacher-block img {
+    max-width: 50%;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.teacher-block h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.teacher-block p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.teacher-block:last-child {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+/* Stijlen voor de afbeelding */
+.rooster-image {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+.rooster-image img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/* Stijl voor de vakken */
+.vakken {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.vakken-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    color: white;
+    width: 80%;
+    margin: 0 auto; /* Hiermee center je de vakken op het scherm */
+}
+
+
+.vak-block {
+    background-color: #450079;
+    border: 1px solid #33005b;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.vak-block strong {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.vak-block p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.blokken-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Dezelfde hoogte als rooster.jpg */
+}
+
+.blokken-image img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+/* Media query voor schermen met een maximale breedte van 768px (telefoon) */
+@media (max-width: 768px) {
     header {
-        background-color: #ffcc00;
-        padding: 10px 0;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        position: relative; /* Voeg position toe */
+        flex-direction: column;
+        align-items: center; /* Inhoud van de header centreren */
+        padding: 20px;
     }
 
     .logo {
-        width: 100px;
-        height: auto;
-        margin-left: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-top: 10px;
     }
 
     nav ul {
-        list-style: none;
-        display: flex;
+        flex-direction: column;
+        align-items: center; /* Knoppen centreren */
     }
 
     nav li {
-        margin-right: 20px;
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
-    h1 {
-        text-align: center;
-        margin: 20px;
-    }
-
-    p {
-        text-align: center;
-        margin: 10px;
-    }
-
-    /* Stijlen voor het vak aan de rechterkant */
     .right-box {
-        background-color: #450079;
-        color: white;
-        border-radius: 10px;
-        padding: 20px;
-        width: 50%;
-        margin: 0 auto; /* Horizontaal centreren zonder negatieve marges */
-        position: relative;
-        z-index: 1; /* Zorg ervoor dat het paarse vak bovenop de achtergrond staat */
-        text-align: center; /* Centreer de tekst binnen het paarse vak */
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
     }
 
-    .right-box h2 {
-        font-size: 24px;
+    .teacher-grid {
+        width: 90%;
+        grid-template-columns: 1fr; /* Docentblokken in één kolom weergeven */
     }
 
-    .right-box p {
-        font-size: 16px;
+    .teacher-block img {
+        max-width: 100%;
+        height: auto;
     }
+
+    .rooster-image {
+        height: auto;
+    }
+
+    .rooster-image img {
+        width: 100%;
+        height: auto;
+    }
+}
