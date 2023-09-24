@@ -66,6 +66,18 @@ p {
     margin: 10px;
 }
 
+
+.backround-image {
+    background-image: url('images/school.jpg'); /* Vervang 'images/school.jpg' door het pad naar je afbeelding */
+    background-size: cover; /* Hiermee wordt de afbeelding opvullend weergegeven */
+    background-position: center center; /* Hiermee wordt de afbeelding in het midden van de div geplaatst */
+    background-repeat: no-repeat; /* Hiermee wordt de afbeelding niet herhaald */
+    color: white; /* Tekstkleur (wit in dit voorbeeld, pas aan indien nodig) */
+    padding: 20px; /* Voeg wat opvulling toe om de tekst leesbaar te maken */
+    text-align: center; /* Tekst centreren binnen de div */
+}
+
+
 /* Stijlen voor het vak aan de rechterkant */
 .right-box {
     background-color: #450079;
@@ -254,4 +266,8 @@ p {
         width: 100%;
         height: auto;
     }
+}
+
+html {
+    scroll-behavior: smooth;
 }
