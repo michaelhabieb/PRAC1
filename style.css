@@ -271,3 +271,7 @@ p {
 html {
     scroll-behavior: smooth;
 }
+
+footer{
+    font-weight: bold;
+}
