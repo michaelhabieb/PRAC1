@@ -59,6 +59,7 @@ nav a:hover {
 h1 {
     text-align: center;
     margin: 20px;
+    color: black;
 }
 
 p {
@@ -212,66 +213,48 @@ p {
     max-height: 100%;
 }
 
-
-
-
-/* Media query voor schermen met een maximale breedte van 768px (telefoon) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center; /* Inhoud van de header centreren */
-        padding: 20px;
-    }
-
-    .logo {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    nav {
-        margin-top: 10px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center; /* Knoppen centreren */
-    }
-
-    nav li {
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .right-box {
-        width: 90%;
-        margin: 0 auto;
-        padding: 10px;
-    }
-
-    .teacher-grid {
-        width: 90%;
-        grid-template-columns: 1fr; /* Docentblokken in één kolom weergeven */
-    }
-
-    .teacher-block img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .rooster-image {
-        height: auto;
-    }
-
-    .rooster-image img {
-        width: 100%;
-        height: auto;
-    }
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 footer{
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0; 
+    }
+    .logo img {
+        width: 80px; 
+    }
+
+    nav {
+        display: none; 
+    }
+
+    .menu-btn {
+        display: block; 
+        margin-top: 10px; 
+    }
+
+    
+    .vakken-grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .vak-block {
+        margin-bottom: 20px;
+    }
+    .teacher-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .teacher-block {
+        width: 100%;
+}
 }
